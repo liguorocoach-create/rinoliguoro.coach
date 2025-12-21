@@ -44,10 +44,15 @@
             background-color: var(--accent-color);
             transition: all 0.3s ease;
         }
-        .btn-gold:hover {
+        .btn-gold:hover:not(:disabled) {
             background-color: #a8884a;
             transform: translateY(-2px);
             box-shadow: 0 10px 20px rgba(197, 160, 89, 0.3);
+        }
+        .btn-gold:disabled {
+            background-color: #d1d1d1;
+            cursor: not-allowed;
+            opacity: 0.7;
         }
         .glass-card {
             background: rgba(255, 255, 255, 0.8);
@@ -122,6 +127,23 @@
             .split-box { width: 100%; height: 50%; position: relative; }
             .split-left { border-right: none; border-bottom: 4px solid white; }
         }
+
+        /* Custom input focus styles */
+        .custom-input:focus {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 2px rgba(197, 160, 89, 0.2);
+        }
+
+        /* Captcha Mock Style */
+        .captcha-container {
+            display: flex;
+            align-items: center;
+            background: #f9f9f9;
+            border: 1px solid #d3d3d3;
+            padding: 12px;
+            border-radius: 8px;
+            width: fit-content;
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -146,6 +168,7 @@
             <a href="#chi-sono" class="hover:text-amber-700 transition">Chi Sono</a>
             <a href="#esperienze" class="hover:text-amber-700 transition">Esperienze</a>
             <a href="#percorsi" class="hover:text-amber-700 transition">Percorsi</a>
+            <a href="#info-aree" class="hover:text-amber-700 transition">Richiedi Info</a>
             <a href="#contatti" class="hover:text-amber-700 transition">Contatti</a>
         </div>
     </nav>
@@ -250,7 +273,7 @@
     <section id="servizi" class="py-24 px-6 bg-stone-100">
         <div class="max-w-7xl mx-auto">
             <h2 class="text-5xl text-center mb-16 text-amber-900">Aree di Intervento</h2>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center mb-20">
                 <div class="bg-white p-8 rounded-3xl shadow-lg border-t-8 border-amber-600 flex flex-col h-full items-center text-center">
                     <div class="text-amber-600 text-3xl mb-4"><i class="fas fa-gem"></i></div>
                     <h3 class="text-xl font-bold mb-3">Business Coaching</h3>
@@ -270,6 +293,56 @@
                     <div class="text-amber-600 text-3xl mb-4"><i class="fas fa-users"></i></div>
                     <h3 class="text-xl font-bold mb-3">Formazione Live</h3>
                     <p class="text-gray-600 text-sm mb-6 flex-grow">Comunicazione efficace, Leadership e Problem Solving per i Team aziendali.</p>
+                </div>
+            </div>
+
+            <!-- Modulo Richiesta Info Aree -->
+            <div id="info-aree" class="max-w-4xl mx-auto glass-card p-10 md:p-16 rounded-[3rem] shadow-2xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-8 text-amber-200/20 text-9xl -rotate-12 pointer-events-none">
+                    <i class="fas fa-paper-plane"></i>
+                </div>
+                <div class="relative z-10 text-center md:text-left">
+                    <h3 class="text-3xl md:text-4xl font-bold text-amber-900 mb-4">Maggiori Informazioni?</h3>
+                    <p class="text-gray-600 mb-10 text-lg">Seleziona l'area di tuo interesse e ricevi i dettagli sui programmi disponibili.</p>
+                    
+                    <form action="https://formspree.io/f/mzdprjda" method="POST" class="space-y-6" id="form-aree">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-widest text-amber-800 mb-2 ml-2">Nome e Cognome</label>
+                                <input type="text" name="nome" placeholder="Inserisci il tuo nome" class="w-full bg-white border border-stone-200 p-4 rounded-2xl focus:border-amber-600 outline-none transition custom-input" required>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-widest text-amber-800 mb-2 ml-2">Email Professionale</label>
+                                <input type="email" name="email" placeholder="esempio@email.it" class="w-full bg-white border border-stone-200 p-4 rounded-2xl focus:border-amber-600 outline-none transition custom-input" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-widest text-amber-800 mb-2 ml-2">Area di Interesse</label>
+                            <select name="area_intervento" class="w-full bg-white border border-stone-200 p-4 rounded-2xl focus:border-amber-600 outline-none transition custom-input appearance-none" required>
+                                <option value="" disabled selected>Scegli una categoria...</option>
+                                <option value="Business Coaching">Business Coaching (Leadership & Manager)</option>
+                                <option value="Life Coaching">Life Coaching (Evoluzione Personale)</option>
+                                <option value="Ikigai Coaching">Ikigai Coaching (Scopo e Visione)</option>
+                                <option value="Formazione Aziendale">Formazione Live (Team & Soft Skills)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-widest text-amber-800 mb-2 ml-2">Messaggio (Opzionale)</label>
+                            <textarea name="messaggio" rows="3" placeholder="Parlami brevemente delle tue esigenze..." class="w-full bg-white border border-stone-200 p-4 rounded-2xl focus:border-amber-600 outline-none transition custom-input"></textarea>
+                        </div>
+
+                        <!-- Controllo Robot Aree -->
+                        <div class="py-2">
+                            <div class="captcha-container">
+                                <input type="checkbox" id="check-robot-aree" class="w-5 h-5 accent-amber-600 cursor-pointer mr-3" onchange="toggleSubmit('btn-aree', this)">
+                                <label for="check-robot-aree" class="text-sm font-medium text-gray-700 cursor-pointer select-none">Non sono un robot</label>
+                                <i class="fas fa-robot text-gray-400 ml-4"></i>
+                            </div>
+                        </div>
+
+                        <input type="hidden" name="_subject" value="Nuova richiesta info Aree di Intervento - Gennaro Liguoro">
+                        <button type="submit" id="btn-aree" class="w-full btn-gold text-white p-5 rounded-2xl font-bold uppercase tracking-widest text-lg shadow-lg" disabled>Invia Richiesta</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -352,13 +425,23 @@
             <h2 class="text-4xl md:text-5xl mb-6">Sviluppa la tua Intelligenza Emotiva</h2>
             <p class="text-zinc-400 mb-12 italic">Lascia la tua mail per ricevere gratuitamente la mia guida esclusiva e iniziare a gestire le tue emozioni con consapevolezza.</p>
             
-            <form action="https://formspree.io/f/mzdprjda" method="POST" class="space-y-6">
+            <form action="https://formspree.io/f/mzdprjda" method="POST" class="space-y-6" id="form-guida">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <input type="text" name="nome" placeholder="Nome" class="w-full bg-zinc-800 border border-zinc-700 p-5 rounded-2xl focus:border-amber-600 outline-none transition" required>
                     <input type="email" name="email" placeholder="Email" class="w-full bg-zinc-800 border border-zinc-700 p-5 rounded-2xl focus:border-amber-600 outline-none transition" required>
                 </div>
+
+                <!-- Controllo Robot Guida -->
+                <div class="flex justify-center py-2">
+                    <div class="captcha-container bg-zinc-800 border-zinc-700">
+                        <input type="checkbox" id="check-robot-guida" class="w-5 h-5 accent-amber-600 cursor-pointer mr-3" onchange="toggleSubmit('btn-guida', this)">
+                        <label for="check-robot-guida" class="text-sm font-medium text-zinc-300 cursor-pointer select-none">Non sono un robot</label>
+                        <i class="fas fa-robot text-zinc-500 ml-4"></i>
+                    </div>
+                </div>
+
                 <input type="hidden" name="_subject" value="Richiesta Guida Intelligenza Emotiva - Sito Web">
-                <button type="submit" class="w-full btn-gold p-5 rounded-2xl font-bold uppercase tracking-widest text-lg">Ricevi la Guida PDF</button>
+                <button type="submit" id="btn-guida" class="w-full btn-gold p-5 rounded-2xl font-bold uppercase tracking-widest text-lg" disabled>Ricevi la Guida PDF</button>
             </form>
             
             <div class="mt-16 flex justify-center space-x-10 text-3xl text-zinc-600">
@@ -374,7 +457,16 @@
     </footer>
 
     <script>
+        // Funzione per gestire l'abilitazione dei pulsanti di invio
+        function toggleSubmit(btnId, checkbox) {
+            const btn = document.getElementById(btnId);
+            if (btn) {
+                btn.disabled = !checkbox.checked;
+            }
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
+            // Gestione contatore visite
             const countEl = document.getElementById('visitor-count');
             if (countEl) {
                 let currentCount = parseInt(localStorage.getItem('gl_visits') || "1248");
