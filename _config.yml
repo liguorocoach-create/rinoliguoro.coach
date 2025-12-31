@@ -4,6 +4,9 @@ description: "Strategie per migliorare la tua vita e il tuo business."
 url: https://liguorocoach-create.github.io/rinoliguoro.coach/
 baseurl: "" # Lascia vuoto se il sito è nel repository principale
 
+# Link alla call di coaching (Systeme.io)
+booking_link: https://gennaroliguorocoach.systeme.io/paginacalendario
+
 # Informazioni sull'Autore
 author:
   name: Gennaro Liguoro
