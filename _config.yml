@@ -1,0 +1,20 @@
+# Informazioni sul Sito
+title: "Gennaro Liguoro - Coaching & Crescita"
+description: "Strategie per migliorare la tua vita e il tuo business."
+url: https://liguorocoach-create.github.io/rinoliguoro.coach/
+baseurl: "" # Lascia vuoto se il sito è nel repository principale
+
+# Informazioni sull'Autore
+author:
+  name: Gennaro Liguoro
+  email: liguoro.coach@gmail.com
+  twitter_username: "tuoprofilo"
+
+# Impostazioni di Build
+theme: minima # Il tema standard di GitHub
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag # Fondamentale per essere indicizzato su Google
+
+# Impostazioni Markdown
+markdown: kramdown
