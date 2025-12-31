@@ -20,4 +20,9 @@ plugins:
   - jekyll-seo-tag # Fondamentale per essere indicizzato su Google
 
 # Impostazioni Markdown
+---
+Ti piace quello che hai letto? Se vuoi approfondire questi temi e capire come applicarli alla tua situazione specifica, prenota una call gratuita con me.
+
+[👉 Clicca qui per prenotare la tua sessione su Systeme.io] https://gennaroliguorocoach.systeme.io/paginacalendario
+---
 markdown: kramdown
