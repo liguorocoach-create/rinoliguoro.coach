@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <!-- Google tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3HFKSZBFZL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-3HFKSZBFZL');
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletm.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-T6VM9DQT');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gennaro Liguoro - Business, Life & Ikigai Coach</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #f8f5f0;
+            --accent-color: #c5a059;
+            --text-dark: #2d2d2d;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--primary-color);
+            color: var(--text-dark);
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        
+        .btn-gold {
+            background-color: var(--accent-color);
+            transition: all 0.3s ease;
+        }
+        .btn-gold:hover:not(:disabled) {
+            background-color: #a8884a;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(197, 160, 89, 0.3);
+        }
+        .btn-gold:disabled {
+            background-color: #d1d1d1;
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(197, 160, 89, 0.2);
+        }
+        .logo-container { height: 110px; display: flex; align-items: center; gap: 20px; }
+        
+        .personal-logo {
+            max-height: 80px;
+            width: auto;
+            object-fit: contain;
+        }
+        
+        .icf-logo {
+            max-height: 50px;
+            opacity: 0.7;
+            filter: grayscale(100%);
+            transition: all 0.3s ease;
+        }
+        .icf-logo:hover { opacity: 1; filter: grayscale(0%); }
+
+        .scuola-logo {
+            max-height: 120px;
+            width: auto;
+            margin: 0 auto;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+        }
+
+        .pricing-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .pricing-card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Stili Hero Split */
+        .coaching-split {
+            position: relative;
+            overflow: hidden;
+            border-radius: 2rem;
+            height: 500px;
+        }
+        .split-box {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 50%;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: flex-end;
+            padding: 2.5rem;
+            transition: all 0.5s ease;
+        }
+        .split-left {
+            left: 0;
+            background-image: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 60%, transparent 100%), url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070&auto=format&fit=crop');
+            border-right: 4px solid white;
+        }
+        .split-right {
+            right: 0;
+            background-image: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 60%, transparent 100%), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop');
+        }
+        .split-text {
+            color: white;
+            z-index: 10;
+        }
+        
+        @media (max-width: 768px) {
+            .coaching-split { height: 600px; }
+            .split-box { width: 100%; height: 50%; position: relative; }
+            .split-left { border-right: none; border-bottom: 4px solid white; }
+        }
+
+        /* Custom input focus styles */
+        .custom-input:focus {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 2px rgba(197, 160, 89, 0.2);
+        }
+
+        /* Captcha Mock Style */
+        .captcha-container {
+            display: flex;
+            align-items: center;
+            background: #f9f9f9;
+            border: 1px solid #d3d3d3;
+            padding: 12px;
+            border-radius: 8px;
+            width: fit-content;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T6VM9DQT"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Navbar -->
+    <nav class="p-4 flex justify-between items-center max-w-7xl mx-auto">
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo Gennaro Liguoro" class="personal-logo" onerror="this.style.display='none'; document.getElementById('text-logo').classList.remove('hidden');">
+            
+            <div id="text-logo" class="hidden flex items-center text-2xl font-bold tracking-tighter">
+                <span class="text-stone-800">GENNARO</span><span class="text-amber-600">LIGUORO</span>
+            </div>
+            
+            <div class="h-10 w-px bg-stone-300 hidden md:block"></div>
+            <img src="icf.jpg" alt="ICF" class="icf-logo hidden md:block" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/International_Coaching_Federation_logo.svg/1200px-International_Coaching_Federation_logo.svg.png'">
+        </div>
+        <div class="space-x-8 hidden lg:flex font-semibold text-xs uppercase tracking-widest">
+            <a href="#chi-sono" class="hover:text-amber-700 transition">Chi Sono</a>
+            <a href="#esperienze" class="hover:text-amber-700 transition">Esperienze</a>
+            <a href="#percorsi" class="hover:text-amber-700 transition">Percorsi</a>
+            <a href="#info-aree" class="hover:text-amber-700 transition">Richiedi Info</a>
+            <a href="#contatti" class="hover:text-amber-700 transition">Contatti</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="py-20 px-6 text-center max-w-5xl mx-auto">
+        <h1 class="text-5xl md:text-8xl mb-8 leading-tight">Il tuo percorso verso la <span class="italic text-amber-700">consapevolezza</span>.</h1>
+        <p class="text-xl mb-10 text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Oltre 30 anni di esperienza manageriale e coaching d'élite per guidarti verso lo sviluppo della leadership e la scoperta del tuo Ikigai.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-6">
+            <a href="#contatti" class="btn-gold text-white px-10 py-5 rounded-full font-bold shadow-xl text-lg uppercase text-center">Scarica la Guida</a>
+            <a href="https://gennaroliguorocoach.systeme.io/paginacalendario" target="_blank" class="border-2 border-stone-800 px-10 py-5 rounded-full font-bold hover:bg-stone-800 hover:text-white transition text-lg uppercase text-center">Prenota Call</a>
+        </div>
+    </section>
+
+    <!-- Sezione Esperienze -->
+    <section id="esperienze" class="py-12 px-6 max-w-7xl mx-auto">
+        <div class="coaching-split shadow-2xl">
+            <div class="split-box split-left">
+                <div class="split-text">
+                    <h3 class="text-3xl font-bold mb-2">Coaching One-to-One</h3>
+                    <p class="text-sm opacity-90 uppercase tracking-[0.2em] font-semibold">Focus sulla tua evoluzione personale</p>
+                </div>
+            </div>
+            <div class="split-box split-right">
+                <div class="split-text">
+                    <h3 class="text-3xl font-bold mb-2">Team Coaching</h3>
+                    <p class="text-sm opacity-90 uppercase tracking-[0.2em] font-semibold">Sinergia e leadership collettiva</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bio Section -->
+    <section id="chi-sono" class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+            <div class="glass-card p-10 rounded-[2.5rem] shadow-2xl border-amber-200">
+                <h2 class="text-4xl font-bold text-amber-900 mb-4">Gennaro Liguoro</h2>
+                <h4 class="text-lg font-semibold text-amber-700 mb-8 uppercase tracking-widest">Life, Business & Ikigai Coach</h4>
+                <div class="space-y-6 text-gray-700 leading-relaxed text-justify">
+                    <p class="italic font-medium text-lg text-amber-800">"La mia visione di Coach Umanistico mette al centro le opportunità da cogliere più che i problemi da risolvere."</p>
+                    <p>
+                        Dalle radici nell'IT e nel top management di una grande realtà bancaria multinazionale alla guida del cambiamento umano. 
+                        Già founder e CEO, ho trasformato trent'anni di leadership complessa in un metodo per far fiorire il potenziale.
+                    </p>
+                    <p>
+                        Ho guidato team internazionali e formato oltre 1.000 professionisti, integrando rigore manageriale, 
+                        <strong>Ikigai</strong> e <strong>PNL</strong>. Con oltre <strong>200 ore di coaching individuale e di gruppo</strong> erogate, supporto professionisti e team nell'allenare l'eccellenza.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4 text-xs font-bold uppercase tracking-tighter">
+                        <div class="flex items-center gap-2 text-stone-600"><i class="fas fa-certificate text-amber-600"></i> ICF Coach Level 2</div>
+                        <div class="flex items-center gap-2 text-stone-600"><i class="fas fa-brain text-amber-600"></i> Practitioner PNL</div>
+                        <div class="flex items-center gap-2 text-stone-600"><i class="fas fa-graduation-cap text-amber-600"></i> Master HR Management</div>
+                        <div class="flex items-center gap-2 text-stone-600"><i class="fas fa-sun text-amber-600"></i> Ikigai Specialist</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-3xl text-amber-900 mb-6 font-serif">Numeri che raccontano una storia.</h3>
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                    Unire competenze tecniche, gestione delle risorse umane e diritti civili mi permette di offrire una visione del coaching profonda, pragmatica e universale.
+                </p>
+                <div class="grid grid-cols-2 gap-8">
+                    <div class="text-center p-6 border border-stone-100 rounded-2xl"><p class="text-4xl font-bold text-amber-700">200+</p><p class="text-[10px] uppercase font-bold text-gray-400 mt-2">Ore di Coaching</p></div>
+                    <div class="text-center p-6 border border-stone-100 rounded-2xl"><p class="text-4xl font-bold text-amber-700">1000+</p><p class="text-[10px] uppercase font-bold text-gray-400 mt-2">Persone Formate</p></div>
+                    <div class="text-center p-6 border border-stone-100 rounded-2xl"><p class="text-4xl font-bold text-amber-700">30+</p><p class="text-[10px] uppercase font-bold text-gray-400 mt-2">Anni di Esperienza</p></div>
+                    <div class="text-center p-6 border border-stone-100 rounded-2xl"><p class="text-4xl font-bold text-amber-700">EU</p><p class="text-[10px] uppercase font-bold text-gray-400 mt-2">Progetti Europei</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formazione -->
+    <section id="storia" class="py-24 px-6 bg-stone-900 text-white border-y border-stone-800">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center text-center md:text-left">
+            <div>
+                <h2 class="text-4xl mb-6 text-amber-500">Allenati per l'Eccellenza.</h2>
+                <p class="text-lg text-stone-300 mb-8 leading-relaxed">
+                    Ho conseguito la mia formazione professionale presso la prestigiosa scuola di coaching <strong>"Allenati per l'Eccellenza"</strong>, dove ho appreso il rigore e la passione della metodologia ICF. Successivamente, mi sono specializzato come <strong>Ikigai Coach</strong> presso <strong>Certified Excellence</strong>.
+                </p>
+                <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                    <span class="bg-stone-800 px-4 py-2 rounded-lg text-amber-500 font-bold text-xs border border-stone-700 shadow-sm">ICF Accredited</span>
+                    <span class="bg-stone-800 px-4 py-2 rounded-lg text-amber-500 font-bold text-xs border border-stone-700 shadow-sm">Certified Excellence</span>
+                </div>
+            </div>
+            <div class="flex flex-col items-center">
+                <div class="mb-6">
+                    <img src="logo-allenati.png" alt="Allenati per l'Eccellenza Logo" class="scuola-logo" onerror="this.style.display='none'; document.getElementById('placeholder-scuola').classList.remove('hidden');">
+                    <div id="placeholder-scuola" class="hidden p-8 border-2 border-dashed border-amber-500/30 rounded-3xl bg-stone-800/50">
+                        <p class="text-amber-500 text-2xl font-bold italic">Allenati per l'Eccellenza</p>
+                        <p class="text-[10px] text-stone-400 uppercase tracking-[0.3em] mt-2">Scuola di Coaching Certificata</p>
+                    </div>
+                </div>
+                <div class="text-amber-500 text-6xl mb-4"><i class="fas fa-award"></i></div>
+                <p class="text-amber-500 italic font-serif text-xl">Formazione d'Elite</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servizi -->
+    <section id="servizi" class="py-24 px-6 bg-stone-100">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-5xl text-center mb-16 text-amber-900">Aree di Intervento</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center mb-20">
+                <div class="bg-white p-8 rounded-3xl shadow-lg border-t-8 border-amber-600 flex flex-col h-full items-center text-center">
+                    <div class="text-amber-600 text-3xl mb-4"><i class="fas fa-gem"></i></div>
+                    <h3 class="text-xl font-bold mb-3">Business Coaching</h3>
+                    <p class="text-gray-600 text-sm mb-6 flex-grow">Sviluppo leadership per Middle Manager e percorsi di coaching per la crescita professionale.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-lg border-t-8 border-amber-600 flex flex-col h-full items-center text-center">
+                    <div class="text-amber-600 text-3xl mb-4"><i class="fas fa-heart"></i></div>
+                    <h3 class="text-xl font-bold mb-3">Life Coaching</h3>
+                    <p class="text-gray-600 text-sm mb-6 flex-grow">Percorsi individuali per superare blocchi personali e potenziare la propria autoefficacia.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-lg border-t-8 border-amber-600 flex flex-col h-full items-center text-center">
+                    <div class="text-amber-600 text-3xl mb-4"><i class="fas fa-compass"></i></div>
+                    <h3 class="text-xl font-bold mb-3">Ikigai Coaching</h3>
+                    <p class="text-gray-600 text-sm mb-6 flex-grow">Trova l'equilibrio tra passione, missione e professione per una vita piena.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-lg border-t-8 border-amber-600 flex flex-col h-full items-center text-center">
+                    <div class="text-amber-600 text-3xl mb-4"><i class="fas fa-users"></i></div>
+                    <h3 class="text-xl font-bold mb-3">Formazione Live</h3>
+                    <p class="text-gray-600 text-sm mb-6 flex-grow">Comunicazione efficace, Leadership e Problem Solving per i Team aziendali.</p>
+                </div>
+            </div>
+
+            <!-- Modulo Richiesta Info Aree -->
+            <div id="info-aree" class="max-w-4xl mx-auto glass-card p-10 md:p-16 rounded-[3rem] shadow-2xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-8 text-amber-200/20 text-9xl -rotate-12 pointer-events-none">
+                    <i class="fas fa-paper-plane"></i>
+                </div>
+                <div class="relative z-10 text-center md:text-left">
+                    <h3 class="text-3xl md:text-4xl font-bold text-amber-900 mb-4">Maggiori Informazioni?</h3>
+                    <p class="text-gray-600 mb-10 text-lg">Seleziona l'area di tuo interesse e ricevi i dettagli sui programmi disponibili.</p>
+                    
+                    <form action="https://formspree.io/f/mzdprjda" method="POST" class="space-y-6" id="form-aree">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-widest text-amber-800 mb-2 ml-2">Nome e Cognome</label>
+                                <input type="text" name="nome" placeholder="Inserisci il tuo nome" class="w-full bg-white border border-stone-200 p-4 rounded-2xl focus:border-amber-600 outline-none transition custom-input" required>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-widest text-amber-800 mb-2 ml-2">Email Professionale</label>
+                                <input type="email" name="email" placeholder="esempio@email.it" class="w-full bg-white border border-stone-200 p-4 rounded-2xl focus:border-amber-600 outline-none transition custom-input" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-widest text-amber-800 mb-2 ml-2">Area di Interesse</label>
+                            <select name="area_intervento" class="w-full bg-white border border-stone-200 p-4 rounded-2xl focus:border-amber-600 outline-none transition custom-input appearance-none" required>
+                                <option value="" disabled selected>Scegli una categoria...</option>
+                                <option value="Business Coaching">Business Coaching (Leadership & Manager)</option>
+                                <option value="Life Coaching">Life Coaching (Evoluzione Personale)</option>
+                                <option value="Ikigai Coaching">Ikigai Coaching (Scopo e Visione)</option>
+                                <option value="Formazione Aziendale">Formazione Live (Team & Soft Skills)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-widest text-amber-800 mb-2 ml-2">Messaggio (Opzionale)</label>
+                            <textarea name="messaggio" rows="3" placeholder="Parlami brevemente delle tue esigenze..." class="w-full bg-white border border-stone-200 p-4 rounded-2xl focus:border-amber-600 outline-none transition custom-input"></textarea>
+                        </div>
+
+                        <!-- Controllo Robot Aree -->
+                        <div class="py-2">
+                            <div class="captcha-container">
+                                <input type="checkbox" id="check-robot-aree" class="w-5 h-5 accent-amber-600 cursor-pointer mr-3" onchange="toggleSubmit('btn-aree', this)">
+                                <label for="check-robot-aree" class="text-sm font-medium text-gray-700 cursor-pointer select-none">Non sono un robot</label>
+                                <i class="fas fa-robot text-gray-400 ml-4"></i>
+                            </div>
+                        </div>
+
+                        <input type="hidden" name="_subject" value="Nuova richiesta info Aree di Intervento - Gennaro Liguoro">
+                        <button type="submit" id="btn-aree" class="w-full btn-gold text-white p-5 rounded-2xl font-bold uppercase tracking-widest text-lg shadow-lg" disabled>Invia Richiesta</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Percorsi di Coaching -->
+    <section id="percorsi" class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl text-amber-900 mb-4">Scegli il tuo Percorso</h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto italic">Programmi strutturati per accompagnarti passo dopo passo verso l'eccellenza.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Zip Coaching -->
+                <div class="pricing-card bg-stone-50 p-10 rounded-[2.5rem] border border-stone-200 flex flex-col h-full shadow-sm">
+                    <div class="text-amber-700 font-bold uppercase tracking-widest text-xs mb-4">Focus Rapido</div>
+                    <h3 class="text-3xl font-bold mb-2">Zip Coaching</h3>
+                    <div class="text-amber-600 text-lg font-bold mb-6 italic">3 Incontri</div>
+                    <ul class="space-y-4 mb-10 flex-grow">
+                        <li class="flex items-start gap-3 text-gray-600 text-sm"><i class="fas fa-check text-amber-600 mt-1"></i> Risoluzione di un blocco specifico</li>
+                        <li class="flex items-start gap-3 text-gray-600 text-sm"><i class="fas fa-check text-amber-600 mt-1"></i> Action Plan immediato</li>
+                        <li class="flex items-start gap-3 text-gray-600 text-sm"><i class="fas fa-check text-amber-600 mt-1"></i> Supporto via mail</li>
+                    </ul>
+                    <a href="https://gennaroliguorocoach.systeme.io/paginacalendario" target="_blank" class="block text-center border-2 border-stone-800 py-4 rounded-full font-bold hover:bg-stone-800 hover:text-white transition">Inizia ora</a>
+                </div>
+
+                <!-- Percorso Standard -->
+                <div class="pricing-card bg-stone-900 text-white p-10 rounded-[2.5rem] border-4 border-amber-600 flex flex-col h-full shadow-2xl relative">
+                    <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-amber-600 text-white px-6 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Consigliato</div>
+                    <div class="text-amber-500 font-bold uppercase tracking-widest text-xs mb-4">Trasformazione</div>
+                    <h3 class="text-3xl font-bold mb-2">Percorso Standard</h3>
+                    <div class="text-amber-500 text-lg font-bold mb-6 italic">5 Incontri</div>
+                    <ul class="space-y-4 mb-10 flex-grow text-stone-300">
+                        <li class="flex items-start gap-3 text-sm"><i class="fas fa-check text-amber-500 mt-1"></i> Analisi profonda del potenziale</li>
+                        <li class="flex items-start gap-3 text-sm"><i class="fas fa-check text-amber-500 mt-1"></i> Sviluppo di nuove abitudini</li>
+                        <li class="flex items-start gap-3 text-sm"><i class="fas fa-check text-amber-500 mt-1"></i> Tecniche di PNL applicate</li>
+                        <li class="flex items-start gap-3 text-sm"><i class="fas fa-check text-amber-500 mt-1"></i> Follow-up post-percorso</li>
+                    </ul>
+                    <a href="https://gennaroliguorocoach.systeme.io/paginacalendario" target="_blank" class="block text-center btn-gold text-white py-4 rounded-full font-bold shadow-lg">Scegli Standard</a>
+                </div>
+
+                <!-- Percorso Premium -->
+                <div class="pricing-card bg-stone-50 p-10 rounded-[2.5rem] border border-stone-200 flex flex-col h-full shadow-sm">
+                    <div class="text-amber-700 font-bold uppercase tracking-widest text-xs mb-4">Evoluzione Totale</div>
+                    <h3 class="text-3xl font-bold mb-2">Percorso Premium</h3>
+                    <div class="text-amber-600 text-lg font-bold mb-6 italic">8 Incontri</div>
+                    <ul class="space-y-4 mb-10 flex-grow">
+                        <li class="flex items-start gap-3 text-gray-600 text-sm"><i class="fas fa-check text-amber-600 mt-1"></i> Riprogrammazione mindset</li>
+                        <li class="flex items-start gap-3 text-gray-600 text-sm"><i class="fas fa-check text-amber-600 mt-1"></i> Scoperta del proprio Ikigai</li>
+                        <li class="flex items-start gap-3 text-gray-600 text-sm"><i class="fas fa-check text-amber-600 mt-1"></i> Leadership Mentoring</li>
+                        <li class="flex items-start gap-3 text-gray-600 text-sm"><i class="fas fa-check text-amber-600 mt-1"></i> Supporto prioritario WhatsApp</li>
+                    </ul>
+                    <a href="https://gennaroliguorocoach.systeme.io/paginacalendario" target="_blank" class="block text-center border-2 border-stone-800 py-4 rounded-full font-bold hover:bg-stone-800 hover:text-white transition">Scegli Premium</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Podcast -->
+    <section id="podcast" class="py-24 px-6 max-w-5xl mx-auto text-center">
+        <h2 class="text-4xl mb-12 text-amber-900">Ascolta l'Ispirazione</h2>
+        <div class="glass-card p-8 rounded-[2rem] flex flex-col md:flex-row items-center gap-8">
+            <div class="w-full">
+                <iframe src="https://open.spotify.com/embed/episode/5vgRirLYqVkWid9Xt4QowD?utm_source=generator" width="100%" height="232" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+            <div class="md:w-1/3 text-left">
+                <h4 class="font-bold text-xl mb-4 text-stone-900">Episodio in evidenza</h4>
+                <a href="https://open.spotify.com/episode/5vgRirLYqVkWid9Xt4QowD" target="_blank" class="inline-flex items-center bg-[#1DB954] text-white px-6 py-3 rounded-full font-bold text-sm">
+                    <i class="fab fa-spotify mr-2"></i> SPOTIFY
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lead Form -->
+    <section id="contatti" class="py-24 px-6 bg-zinc-900 text-white">
+        <div class="max-w-2xl mx-auto text-center">
+            <div class="inline-block bg-amber-600 text-white px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest mb-4">Risorsa Gratuita</div>
+            <h2 class="text-4xl md:text-5xl mb-6">Sviluppa la tua Intelligenza Emotiva</h2>
+            <p class="text-zinc-400 mb-12 italic">Lascia la tua mail per ricevere gratuitamente la mia guida esclusiva e iniziare a gestire le tue emozioni con consapevolezza.</p>
+            
+            <form action="https://formspree.io/f/mzdprjda" method="POST" class="space-y-6" id="form-guida">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <input type="text" name="nome" placeholder="Nome" class="w-full bg-zinc-800 border border-zinc-700 p-5 rounded-2xl focus:border-amber-600 outline-none transition" required>
+                    <input type="email" name="email" placeholder="Email" class="w-full bg-zinc-800 border border-zinc-700 p-5 rounded-2xl focus:border-amber-600 outline-none transition" required>
+                </div>
+
+                <!-- Controllo Robot Guida -->
+                <div class="flex justify-center py-2">
+                    <div class="captcha-container bg-zinc-800 border-zinc-700">
+                        <input type="checkbox" id="check-robot-guida" class="w-5 h-5 accent-amber-600 cursor-pointer mr-3" onchange="toggleSubmit('btn-guida', this)">
+                        <label for="check-robot-guida" class="text-sm font-medium text-zinc-300 cursor-pointer select-none">Non sono un robot</label>
+                        <i class="fas fa-robot text-zinc-500 ml-4"></i>
+                    </div>
+                </div>
+
+                <input type="hidden" name="_subject" value="Richiesta Guida Intelligenza Emotiva - Sito Web">
+                <button type="submit" id="btn-guida" class="w-full btn-gold p-5 rounded-2xl font-bold uppercase tracking-widest text-lg" disabled>Ricevi la Guida PDF</button>
+            </form>
+            
+            <div class="mt-16 flex justify-center space-x-10 text-3xl text-zinc-600">
+                <a href="https://www.instagram.com/rinoliguoro.coach" target="_blank" class="hover:text-amber-500 transition"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/gennaroliguoro" target="_blank" class="hover:text-amber-500 transition"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="hover:text-amber-500 transition"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center text-[10px] text-gray-500 uppercase tracking-[0.4em]">
+        <p>&copy; 2024 GENNARO LIGUORO COACHING | ECCELLENZA E CONSAPEVOLEZZA: <span id="visitor-count">1248</span></p>
+    </footer>
+
+    <script>
+        // Funzione per gestire l'abilitazione dei pulsanti di invio
+        function toggleSubmit(btnId, checkbox) {
+            const btn = document.getElementById(btnId);
+            if (btn) {
+                btn.disabled = !checkbox.checked;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Gestione contatore visite
+            const countEl = document.getElementById('visitor-count');
+            if (countEl) {
+                let currentCount = parseInt(localStorage.getItem('gl_visits') || "1248");
+                currentCount++;
+                localStorage.setItem('gl_visits', currentCount);
+                countEl.innerText = currentCount.toLocaleString();
+            }
+        });
+    </script>
+</body>
+</html>
